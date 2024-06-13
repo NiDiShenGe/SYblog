@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.edu.zust.se</groupId>
+    <artifactId>SYblog</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>SYblog</name>
+    <description>SYblog</description>
+    <modules>
+        <module>blog-gateway</module>
+        <module>blog-framework</module>
+        <module>blog-module-system</module>
+        <module>blog-module-blog</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.2</version>
+    </parent>
+    <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
+        <!-- Maven 相关 -->
+        <java.version>17</java.version>
+        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <!-- 统一依赖管理 -->
+        <spring.boot.version>3.2.1</spring.boot.version>
+        <spring.cloud.version>2023.0.0</spring.cloud.version>
+        <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
+        <!-- Web 相关 -->
+        <springdoc.version>2.2.0</springdoc.version>
+        <knife4j.version>4.3.0</knife4j.version>
+        <!-- DB 相关 -->
+        <druid.version>1.2.21</druid.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.5</mybatis-plus-generator.version>
+        <dynamic-datasource.version>4.3.0</dynamic-datasource.version>
+        <mybatis-plus-join.version>1.4.10</mybatis-plus-join.version>
+        <easy-trans.version>2.2.11</easy-trans.version>
+        <redisson.version>3.26.0</redisson.version>
+        <dm8.jdbc.version>8.1.3.62</dm8.jdbc.version>
+        <!-- 工具类相关 -->
+        <captcha-plus.version>2.0.3</captcha-plus.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <lombok.version>1.18.30</lombok.version>
+        <hutool-5.version>5.8.25</hutool-5.version>
+        <hutool-6.version>6.0.0-M10</hutool-6.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!--
+        父项目进行统一依赖管理，这些依赖并不会马上被maven下载，只有在子项目中依赖到的时候才会被下载
+        可以让子类在添加依赖的时候不写version
+      -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- 统一依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dromara.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutool-6.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.edu.zust.se</groupId>
+                <artifactId>blog-common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <!-- 用于生成自定义的 Spring @ConfigurationProperties 配置类的说明文件 -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
