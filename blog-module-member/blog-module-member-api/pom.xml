@@ -3,23 +3,27 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.edu.zust.se</groupId>
-        <artifactId>blog-module-system</artifactId>
+        <artifactId>blog-module-member</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>blog-module-system-api</artifactId>
+    <artifactId>blog-module-member-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>blog-module-system-api</name>
+    <name>blog-module-member-api</name>
     <description>
-        system 模块 API，暴露给其它模块调用
+        member 模块 API，暴露给其它模块调用
     </description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>cn.edu.zust.se</groupId>
             <artifactId>blog-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Web 相关 -->
         <dependency>
@@ -27,6 +31,7 @@
             <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <!-- 参数校验 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,11 +44,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.edu.zust.se</groupId>
+        <artifactId>SYblog</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>blog-module-member</artifactId>
+    <packaging>pom</packaging>
+
+    <name>blog-module-member</name>
+    <description>会员模块，提供会员注册、登录、个人信息管理等功能</description>
+    <modules>
+        <module>blog-module-member-api</module>
+        <module>blog-module-member-biz</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>

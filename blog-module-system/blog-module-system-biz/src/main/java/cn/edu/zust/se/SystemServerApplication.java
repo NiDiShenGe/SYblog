@@ -1,12 +1,11 @@
-package cn.iocoder.boot;
-import org.springframework.boot.SpringApplication;
+package cn.edu.zust.se;
+
 /**
  * Hello world!
  *
  */
 
-
-public class App 
+public class SystemServerApplication
 {
     public static void main( String[] args )
     {

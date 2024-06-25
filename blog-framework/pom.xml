@@ -23,6 +23,8 @@
     </description>
     <modules>
         <module>blog-common</module>
+        <module>blog-spring-boot-starter-mybatis</module>
+        <module>blog-spring-boot-starter-biz-tenant</module>
     </modules>
 
     <properties>
