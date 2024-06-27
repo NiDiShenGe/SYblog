@@ -1,4 +1,4 @@
-package cn.edu.zust.se.core.dataobjec;
+package cn.edu.zust.se.mybatis.core.dataobjec;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

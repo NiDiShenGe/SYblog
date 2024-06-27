@@ -25,6 +25,11 @@
         </dependency>
         <dependency>
             <groupId>cn.edu.zust.se</groupId>
+            <artifactId>blog-spring-boot-starter-biz-tenant</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.edu.zust.se</groupId>
             <artifactId>blog-spring-boot-starter-mybatis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -48,7 +53,6 @@
             <groupId>com.xingyuv</groupId>
             <artifactId>spring-boot-starter-justauth</artifactId> <!-- 社交登陆（例如说，个人微信、企业微信等等） -->
         </dependency>
-
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>wx-java-mp-spring-boot-starter</artifactId> <!-- 微信登录（公众号） -->

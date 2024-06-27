@@ -1,6 +1,6 @@
 package cn.edu.zust.se.core.db;
 
-import cn.edu.zust.se.core.dataobjec.BaseDO;
+import cn.edu.zust.se.mybatis.core.dataobjec.BaseDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
