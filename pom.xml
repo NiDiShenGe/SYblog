@@ -274,6 +274,14 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+            <!-- rpc调用 -->
+            <dependency>
+                <groupId>cn.edu.zust.se</groupId>
+                <artifactId>blog-spring-boot-starter-rpc</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

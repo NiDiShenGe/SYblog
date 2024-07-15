@@ -25,6 +25,9 @@
         <module>blog-common</module>
         <module>blog-spring-boot-starter-mybatis</module>
         <module>blog-spring-boot-starter-biz-tenant</module>
+        <module>blog-spring-boot-starter-rpc</module>
+        <module>blog-spring-boot-starter-web</module>
+        <module>blog-spring-boot-starter-biz-ip</module>
     </modules>
 
     <properties>

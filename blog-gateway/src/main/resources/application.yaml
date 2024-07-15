@@ -1,14 +1,21 @@
-server:
-  port: 9000
 spring:
-  application:
-    name: blog-gateway
+  main:
+    allow-circular-references: true # 允许循环依赖，因为项目是三层架构，无法避免这个情况。
+
   cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
     gateway:
-      discovery:
-        locator:
-          enabled: true # 启用服务发现
       routes:
+        - ## system-server 服务
+        - id: system-admin-api
+          uri: lb://system-server
+          predicates:
+            - Path=/admin-api/system/**
+          filters:
+            - RewritePath=/admin-api/system/v3/api-docs, /v3/api-docs # 配置，保证转发到 /v3/api-docs
+        - id: system-app-api # 路由的编号
+          uri: lb://system-server
+          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+            - Path=/app-api/system/**
+          filters:
+            - RewritePath=/app-api/system/v3/api-docs, /v3/api-docs
+
